@@ -1,4 +1,7 @@
 <!-- https://learning.oreilly.com/library/view/webgl-programming-guide/9780133364903/ch02.html#ch02lev1sec2 -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+<!-- https://developer.mozilla.org/en-US/play -->
+<!-- https://developer.mozilla.org/en-US/play -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +16,14 @@
     <canvas id="example" width="400" height="400">
         Please use a browser that supports "canvas"
     </canvas>
+
+    <label for="x-input">x</label>
+    <input type="text" id="x-input" name="x-input" size="10" />
+
+    <label for="y-input">y</label>
+    <input type="text" id="y-input" name="y-input" size="10" />
+
+    <input type="button" name="draw-input" value="Draw" />
 
     <script src="asg0.js"></script>
     <script src="./lib/cuon-matrix-cse160.js"></script>
