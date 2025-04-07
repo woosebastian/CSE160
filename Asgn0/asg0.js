@@ -44,3 +44,7 @@ function drawVector(v, color) {
     
     ctx.stroke();
 }
+
+function handleDrawEvent() {
+    
+}
