@@ -27,6 +27,6 @@ function drawVector(v, color) {
     let cy = canvas.height / 2;
     ctx.beginPath();
     ctx.moveTo(cx, cy);
-    ctx.lineTo(cx + v[0], cy + v[1]);
+    ctx.lineTo(cx + (20 * v[0]), cy + (20 * v[1]));
     ctx.stroke();
 }
