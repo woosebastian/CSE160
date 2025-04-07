@@ -1,4 +1,5 @@
 // https://learning.oreilly.com/library/view/webgl-programming-guide/9780133364903/ch02.html#ch02lev1sec2
+// https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
 
 // DrawRectangle.js
 function main() {
@@ -20,5 +21,12 @@ function main() {
 }
 
 function drawVector(v, color) {
-    lineTo(v);
+    ctx.strokeStyle = color;
+    
+    let cx = canvas.width / 2;
+    let cy = canvas.height / 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + v[0], cy + v[1]);
+    ctx.stroke();
 }
