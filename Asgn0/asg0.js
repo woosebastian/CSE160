@@ -25,6 +25,12 @@ function main() {
 }
 
 function drawVector(v, color) {
+    var canvas = document.getElementById('example');
+    if (!canvas) {
+        console.log('Failed to retrieve the <canvas> element');
+        return;
+    }
+
     var ctx = canvas.getContext('2d');
     
     ctx.strokeStyle = color;
