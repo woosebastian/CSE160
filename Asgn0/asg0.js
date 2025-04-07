@@ -21,7 +21,7 @@ function main() {
 
     var v1 = new Vector3([2.25, 2.25, 0]);
 
-    drawVector(v1, "red");
+    ctx.drawVector(v1, "red");
 }
 
 function drawVector(v, color) {
