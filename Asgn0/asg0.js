@@ -17,7 +17,9 @@ function main() {
     ctx.fillStyle = 'rgba(0, 0, 255, 1.0)'; // Set a blue color
     ctx.fillRect(120, 10, 150, 150); // Fill a rectangle with the color
 
-    var v1 = Vector3([1, 1, 0]);
+    var v1 = Vector3([2.25, 2.25, 0]);
+
+    drawVector(v1, "red");
 }
 
 function drawVector(v, color) {
