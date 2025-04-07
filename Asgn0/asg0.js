@@ -1,6 +1,7 @@
 // https://learning.oreilly.com/library/view/webgl-programming-guide/9780133364903/ch02.html#ch02lev1sec2
 // https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
 // https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
+// https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
 
 // DrawRectangle.js
 function main() {
@@ -16,7 +17,7 @@ function main() {
 
     // Draw a blue rectangle                                       <- (3)
     ctx.fillStyle = 'rgba(0, 0, 0, 1.0)'; // Set a blue color
-    ctx.fillRect(120, 10, 150, 150); // Fill a rectangle with the color
+    ctx.fillRect(0, 0, canvas.width, canvas.height); // Fill a rectangle with the color
 
     var v1 = Vector3([2.25, 2.25, 0]);
 
