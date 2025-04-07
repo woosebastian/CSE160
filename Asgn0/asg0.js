@@ -40,8 +40,7 @@ function drawVector(v, color) {
     ctx.beginPath();
     ctx.moveTo(cx, cy);
     
-    console.log(v[0]);
-    ctx.lineTo(cx + (20 * v[0]), cy + (20 * v[1]));
+    ctx.lineTo(cx + (20 * (v.elements)[0]), cy + (20 * (v.elements)[1]));
     
     ctx.stroke();
 }
