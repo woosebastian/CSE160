@@ -25,6 +25,8 @@ function main() {
 }
 
 function drawVector(v, color) {
+    var ctx = canvas.getContext('2d');
+    
     ctx.strokeStyle = color;
     
     let cx = canvas.width / 2;
