@@ -22,8 +22,6 @@ function main() {
     var v1 = new Vector3([2.25, 2.25, 0]);
 
     drawVector(v1, "red");
-
-    console.log("hello");
 }
 
 function drawVector(v, color) {
@@ -41,6 +39,9 @@ function drawVector(v, color) {
     let cy = canvas.height / 2;
     ctx.beginPath();
     ctx.moveTo(cx, cy);
-    ctx.lineTo(cx + (20 * v[0]), cy + (20 * v[1]));
+    
+    // ctx.lineTo(cx + (20 * v[0]), cy + (20 * v[1]));
+    ctx.lineTo(cx + 40, cy + 80);
+    
     ctx.stroke();
 }
