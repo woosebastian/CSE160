@@ -48,6 +48,12 @@ function drawVector(v, color) {
 }
 
 function handleDrawEvent() {
+    var canvas = document.getElementById('example');
+    if (!canvas) {
+        console.log('Failed to retrieve the <canvas> element');
+        return;
+    }
+    
     var ctx = canvas.getContext('2d');
     
     // Specify the color for clearing <canvas>
