@@ -2,6 +2,8 @@
 // https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
 // https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
 // https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
+// https://learning.oreilly.com/library/view/webgl-programming-guide/9780133364903/ch02.html#ch02lev1sec2
+// https://stackoverflow.com/questions/763745/how-to-get-text-box-value-in-javascript
 
 // DrawRectangle.js
 function main() {
@@ -46,5 +48,16 @@ function drawVector(v, color) {
 }
 
 function handleDrawEvent() {
-    
+    // Specify the color for clearing <canvas>
+    ctx.clearColor(0, 0, 0, 1.0);
+
+    // Clear <canvas>
+    ctx.clear(ctx.COLOR_BUFFER_BIT);
+
+    var xInput = document.getElementById('x-input').value;
+    var yInput = document.getElementById('y-input').value;
+
+    var v1 = new Vector3([xInput, yInput, 0]);
+
+    drawVector(v1, "red");
 }
