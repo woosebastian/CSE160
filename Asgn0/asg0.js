@@ -48,6 +48,8 @@ function drawVector(v, color) {
 }
 
 function handleDrawEvent() {
+    var ctx = canvas.getContext('2d');
+    
     // Specify the color for clearing <canvas>
     ctx.clearColor(0, 0, 0, 1.0);
 
