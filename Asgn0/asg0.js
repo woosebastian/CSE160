@@ -62,7 +62,9 @@ function handleDrawEvent() {
 
     // Clear <canvas>
     // ctx.clear(ctx.COLOR_BUFFER_BIT);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'rgba(0, 0, 0, 1.0)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     var xInput = document.getElementById('x-input').value;
     var yInput = document.getElementById('y-input').value;
