@@ -57,7 +57,7 @@ function handleDrawEvent() {
     var ctx = canvas.getContext('2d');
     
     // Specify the color for clearing <canvas>
-    ctx.clearColor(0, 0, 0, 1.0);
+    // ctx.clearColor(0, 0, 0, 1.0);
 
     // Clear <canvas>
     ctx.clear(ctx.COLOR_BUFFER_BIT);
