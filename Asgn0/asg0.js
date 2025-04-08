@@ -4,6 +4,7 @@
 // https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=5
 // https://learning.oreilly.com/library/view/webgl-programming-guide/9780133364903/ch02.html#ch02lev1sec2
 // https://stackoverflow.com/questions/763745/how-to-get-text-box-value-in-javascript
+// https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing
 
 // DrawRectangle.js
 function main() {
@@ -60,7 +61,8 @@ function handleDrawEvent() {
     // ctx.clearColor(0, 0, 0, 1.0);
 
     // Clear <canvas>
-    ctx.clear(ctx.COLOR_BUFFER_BIT);
+    // ctx.clear(ctx.COLOR_BUFFER_BIT);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     var xInput = document.getElementById('x-input').value;
     var yInput = document.getElementById('y-input').value;
