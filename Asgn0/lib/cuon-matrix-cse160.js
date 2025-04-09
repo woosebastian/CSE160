@@ -47,6 +47,11 @@ class Vector3 {
         // Insert your code here.
         // This function should change this vector (this.elements) and not create a new vector.
 
+        let i = 0;
+        for (i in range(this.elements.length())) {
+            this.elements[i] += other[i];
+        }
+        
         // Don't delete the return statement.
         return this;
     };
@@ -58,6 +63,11 @@ class Vector3 {
     sub(other) {
         // Insert your code here.
         // This function should change this vector (this.elements) and not create a new vector.
+
+        let i = 0;
+        for (i in range(this.elements.length())) {
+            this.elements[i] -= other[i];
+        }
 
         // Don't delete the return statement.
         return this;
@@ -71,6 +81,11 @@ class Vector3 {
         // Insert your code here.
         // This function should change this vector (this.elements) and not create a new vector.
 
+        let i = 0;
+        for (i in range(this.elements.length())) {
+            this.elements[i] = this.elements[i] / scalar;
+        }
+
         // Don't delete the return statement.
         return this;
     };
@@ -82,6 +97,11 @@ class Vector3 {
     mul(scalar) {
         // Insert your code here.
         // This function should change this vector (this.elements) and not create a new vector.
+
+        let i = 0;
+        for (i in range(this.elements.length())) {
+            this.elements[i] = this.elements[i] * scalar;
+        }
 
         // Don't delete the return statement.
         return this;
