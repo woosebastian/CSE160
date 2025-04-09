@@ -1,3 +1,5 @@
+// https://www.w3schools.com/js/js_loop_for.asp
+
 // cuon-matrix.js (c) 2012 kanda and matsuda
 /**
  * This is a class treating 4x4 matrix.
@@ -48,7 +50,8 @@ class Vector3 {
         // This function should change this vector (this.elements) and not create a new vector.
 
         let i = 0;
-        for (i in range(this.elements.length())) {
+        // for (i in range(this.elements.length())) {
+        for (let i = 0; i < this.elements.length; i++) {
             this.elements[i] += other[i];
         }
         
@@ -65,7 +68,8 @@ class Vector3 {
         // This function should change this vector (this.elements) and not create a new vector.
 
         let i = 0;
-        for (i in range(this.elements.length())) {
+        // for (i in range(this.elements.length())) {
+        for (let i = 0; i < this.elements.length; i++) {
             this.elements[i] -= other[i];
         }
 
@@ -82,7 +86,8 @@ class Vector3 {
         // This function should change this vector (this.elements) and not create a new vector.
 
         let i = 0;
-        for (i in range(this.elements.length())) {
+        // for (i in range(this.elements.length())) {
+        for (let i = 0; i < this.elements.length; i++) {
             this.elements[i] = this.elements[i] / scalar;
         }
 
@@ -99,7 +104,8 @@ class Vector3 {
         // This function should change this vector (this.elements) and not create a new vector.
 
         let i = 0;
-        for (i in range(this.elements.length())) {
+        // for (i in range(this.elements.length())) {
+        for (let i = 0; i < this.elements.length; i++) {
             this.elements[i] = this.elements[i] * scalar;
         }
 
