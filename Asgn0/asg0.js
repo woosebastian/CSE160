@@ -119,7 +119,6 @@ function handleDrawOperationEvent() {
 
     if (selectorInput === "add") {
         let v3 = v1.add(v2);
-        console.log(v3);
         drawVector(v3, "green");
     }
     else if (selectorInput === "subtract") {

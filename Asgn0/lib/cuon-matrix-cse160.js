@@ -49,13 +49,13 @@ class Vector3 {
         // Insert your code here.
         // This function should change this vector (this.elements) and not create a new vector.
 
+        console.log(this.elements, other);
+        
         let i = 0;
         // for (i in range(this.elements.length())) {
         for (let i = 0; i < this.elements.length; i++) {
             this.elements[i] = this.elements[i] + other[i];
         }
-
-        console.log(this.elements[i]);
         
         // Don't delete the return statement.
         return this;
