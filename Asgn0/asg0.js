@@ -117,23 +117,23 @@ function handleDrawOperationEvent() {
     var selectorInput = document.getElementById('operation-selector').value;
     var s = document.getElementById('scalar-input').value;
 
-    console.log(selectorInput);
-    if (selectorInput == "add") {
+    if (selectorInput === "add") {
+        console.log('here');
         let v3 = v1.add(v2);
         drawVector(v3, "green");
     }
-    else if (selectorInput == "subtract") {
+    else if (selectorInput === "subtract") {
         let v3 = v1.sub(v2);
         drawVector(v3, "green");
     }
-    else if (selectorInput == "multiply") {
+    else if (selectorInput === "multiply") {
         let v3 = v1.mul(s);
         drawVector(v3, "green");
 
         let v4 = v2.mul(s);
         drawVector(v4, "green");
     }
-    else if (selectorInput == "divide") {
+    else if (selectorInput === "divide") {
         let v3 = v1.div(s);
         drawVector(v3, "green");
 
