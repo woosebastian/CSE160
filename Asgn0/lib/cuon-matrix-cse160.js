@@ -52,7 +52,7 @@ class Vector3 {
         let i = 0;
         // for (i in range(this.elements.length())) {
         for (let i = 0; i < this.elements.length; i++) {
-            this.elements[i] += other[i];
+            this.elements[i] = this.elements[i] + other[i];
         }
         
         // Don't delete the return statement.
@@ -70,7 +70,7 @@ class Vector3 {
         let i = 0;
         // for (i in range(this.elements.length())) {
         for (let i = 0; i < this.elements.length; i++) {
-            this.elements[i] -= other[i];
+            this.elements[i] = this.elements[i] - other[i];
         }
 
         // Don't delete the return statement.
