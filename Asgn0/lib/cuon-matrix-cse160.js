@@ -54,6 +54,8 @@ class Vector3 {
         for (let i = 0; i < this.elements.length; i++) {
             this.elements[i] = this.elements[i] + other[i];
         }
+
+        console.log(this.elements[i]);
         
         // Don't delete the return statement.
         return this;
