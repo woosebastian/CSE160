@@ -118,8 +118,8 @@ function handleDrawOperationEvent() {
     var s = document.getElementById('scalar-input').value;
 
     if (selectorInput === "add") {
-        console.log('here');
         let v3 = v1.add(v2);
+        console.log(v3);
         drawVector(v3, "green");
     }
     else if (selectorInput === "subtract") {
