@@ -117,6 +117,7 @@ function handleDrawOperationEvent() {
     var selectorInput = document.getElementById('operation-selector').value;
     var s = document.getElementById('scalar-input').value;
 
+    console.log(selectorInput);
     if (selectorInput == "add") {
         let v3 = v1.add(v2);
         drawVector(v3, "green");
