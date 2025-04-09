@@ -66,10 +66,17 @@ function handleDrawEvent() {
     ctx.fillStyle = 'rgba(0, 0, 0, 1.0)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    var xInput = document.getElementById('x-input').value;
-    var yInput = document.getElementById('y-input').value;
+    var v1xInput = document.getElementById('v1-x-input').value;
+    var v1yInput = document.getElementById('v1-y-input').value;
 
-    var v1 = new Vector3([xInput, yInput, 0]);
+    var v1 = new Vector3([v1xInput, v1yInput, 0]);
 
     drawVector(v1, "red");
+
+    var v2xInput = document.getElementById('v2-x-input').value;
+    var v2yInput = document.getElementById('v2-y-input').value;
+
+    var v2 = new Vector3([v2xInput, v2yInput, 0]);
+
+    drawVector(v2, "blue")
 }
