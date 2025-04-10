@@ -155,7 +155,7 @@ function handleDrawOperationEvent() {
         console.log("Angle: ", angleBetween(v1, v2));
     }
     else if (selectorInput === "area") {
-        console.log(areaTriangle(v1, v2));
+        console.log("Area of the triangle: ", areaTriangle(v1, v2));
     }
 }
 
