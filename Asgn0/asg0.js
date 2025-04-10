@@ -154,10 +154,19 @@ function handleDrawOperationEvent() {
     else if (selectorInput === "angle between") {
         console.log("Angle: ", angleBetween(v1, v2));
     }
+    else if (selectorInput === "area") {
+        console.log(areaTriangle(v1, v2));
+    }
 }
 
 function angleBetween(v1, v2) {
     alpha = Math.acos((Vector3.dot(v1, v2) / (v1.magnitude() * v2.magnitude()))) * (360 / (2 * Math.PI));
 
     return alpha;
+}
+
+function areaTriangle(v1, v2) {
+    let areaOfTriangle = ((Vector3.cross(v1, v2)).magnitude()) / 2;
+
+    return areaOfTriangle;
 }
