@@ -139,4 +139,12 @@ function handleDrawOperationEvent() {
         let v4 = v2.div(s);
         drawVector(v4, "green");
     }
+    else if (selectorInput === "magnitude") {
+        console.log("Magnitude v1: ", v1.magnitude());
+        console.log("Magnitude v2: ", v2.magnitude());
+    }
+    else if (selectorInput === "normalize") {
+        drawVector(v1.normalize(), "green");
+        drawVector(v2.normalize(), "green");
+    }
 }
