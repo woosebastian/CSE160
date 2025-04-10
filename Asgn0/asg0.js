@@ -157,7 +157,7 @@ function handleDrawOperationEvent() {
 }
 
 function angleBetween(v1, v2) {
-    alpha = Math.acos((Vector3.dot(v1, v2) / (v1.magnitude() * v2.magnitude()))) * (180 / (2 * Math.PI));
+    alpha = Math.acos((Vector3.dot(v1, v2) / (v1.magnitude() * v2.magnitude()))) * (360 / (2 * Math.PI));
 
     return alpha;
 }
