@@ -8,6 +8,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
 // https://www.w3schools.com/jsref/jsref_acos.asp
 // https://www.w3schools.com/jsref/jsref_acos.asp
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
 
 // DrawRectangle.js
 function main() {
@@ -150,12 +151,12 @@ function handleDrawOperationEvent() {
         drawVector(v2.normalize(), "green");
     }
     else if (selectorInput === "angle between") {
-        console.log(angleBetween(v1, v2));
+        console.log("Angle: ", angleBetween(v1, v2));
     }
 }
 
 function angleBetween(v1, v2) {
-    alpha = Math.acos((dot(v1, v2) / (v1.magnitude() * v2.magnitude()))) * (180 / (2 * Math.PI));
+    alpha = Math.acos((this.dot(v1, v2) / (v1.magnitude() * v2.magnitude()))) * (180 / (2 * Math.PI));
 
     return alpha;
 }
