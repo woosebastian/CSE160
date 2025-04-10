@@ -166,7 +166,8 @@ function angleBetween(v1, v2) {
 }
 
 function areaTriangle(v1, v2) {
-    let areaOfTriangle = ((Vector3.cross(v1, v2)).magnitude()) / 2;
+    let vector = Vector3.cross(v1, v2);
+    let areaOfTriangle = (vector.magnitude()) / 2;
 
     return areaOfTriangle;
 }
