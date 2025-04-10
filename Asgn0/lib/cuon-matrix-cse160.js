@@ -160,8 +160,9 @@ class Vector3 {
         // Insert your code here.
         // This function should change this vector (this.elements) and not create a new vector.
 
+        let m = this.magnitude()
         for (let i = 0; i < this.elements.length; i++) {
-            this.elements[i] = this.elements[i] / this.magnitude();
+            this.elements[i] = this.elements[i] / m;
         }
 
         // Don't delete the return statement.
