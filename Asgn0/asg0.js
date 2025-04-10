@@ -6,6 +6,8 @@
 // https://stackoverflow.com/questions/763745/how-to-get-text-box-value-in-javascript
 // https://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+// https://www.w3schools.com/jsref/jsref_acos.asp
+// https://www.w3schools.com/jsref/jsref_acos.asp
 
 // DrawRectangle.js
 function main() {
@@ -147,4 +149,13 @@ function handleDrawOperationEvent() {
         drawVector(v1.normalize(), "green");
         drawVector(v2.normalize(), "green");
     }
+    else if (selectorInput === "angle between") {
+        console.log(angleBetween(v1, v2));
+    }
+}
+
+function angleBetween(v1, v2) {
+    alpha = Math.acos((dot(v1, v2) / (v1.magnitude() * v2.magnitude()))) * (180 / (2 * Math.PI));
+
+    return alpha;
 }
