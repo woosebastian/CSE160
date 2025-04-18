@@ -5,6 +5,9 @@
 // https://www.youtube.com/watch?v=vhDvY4AoT-M&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=7
 // https://www.youtube.com/watch?v=BysWzPpGzqQ&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=8
 // https://www.youtube.com/watch?v=_K1e0jauHc4&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=9
+// https://www.youtube.com/watch?v=7Q0uinfSdm4&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=10
+// https://www.youtube.com/watch?v=61ez8RPpeD8&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=11
+// https://www.youtube.com/watch?v=OnFc7KfIamg&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=12
 
 // // HelloPoint1.js (c) 2012 matsuda
 // // Vertex shader program
@@ -104,12 +107,26 @@ function connectVariablesToGLSL() {
   }
 }
 
+let g_selectedColor = [1.0, 1.0, 1.0, 1.0];
+
+// Set up actions for the HTML UI elements
+function addActionsForHtmlUI() {
+    // Slider Events
+    document.getElementById('redSlide').addEventListener('mouseup', function() { g_selectedColor[0] = this.value/100; });
+    document.getElementById('greenSlide').addEventListener('mouseup', function() { g_selectedColor[1] = this.value/100; });
+    document.getElementById('blueSlide').addEventListener('mouseup', function() { g_selectedColor[2] = this.value/100; });
+}
+
 function main() {
   // Set up canvas and gl variables
   setupWebGL();
+  
   // Set up GLSL shader programs and connect GLSL variables
   connectVariablesToGLSL();
   
+  // Set up actions for the HMTL UI elements
+  addActionsForHtmlUI();
+
   // Register function (event handler) to be called on a mouse press
   canvas.onmousedown = click;
 
@@ -149,14 +166,18 @@ function click(ev) {
   // Store the coordinates to g_points array
   g_points.push([x, y]);
   
+  // Store the color to g_colors array
+  // g_colors.push(g_selectedColor.slice());
+  g_colors.push([g_selectedColor[0],g_selectedColor[1],g_selectedColor[2],g_selectedColor[3]]);
+
   // Store the color to g_points array
-  if (x >= 0.0 && y >= 0.0) {      // First quadrant
-    g_colors.push([1.0, 0.0, 0.0, 1.0]);  // Red
-  } else if (x < 0.0 && y < 0.0) { // Third quadrant
-    g_colors.push([0.0, 1.0, 0.0, 1.0]);  // Green
-  } else {                         // Others
-    g_colors.push([1.0, 1.0, 1.0, 1.0]);  // White
-  }
+//   if (x >= 0.0 && y >= 0.0) {      // First quadrant
+//     g_colors.push([1.0, 0.0, 0.0, 1.0]);  // Red
+//   } else if (x < 0.0 && y < 0.0) { // Third quadrant
+//     g_colors.push([0.0, 1.0, 0.0, 1.0]);  // Green
+//   } else {                         // Others
+//     g_colors.push([1.0, 1.0, 1.0, 1.0]);  // White
+//   }
 
   // Draw every shape that is supposed to be in the canvas
   renderAllShapes();
