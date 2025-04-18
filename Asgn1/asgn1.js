@@ -165,8 +165,6 @@ function click(ev) {
 
   // Store the coordinates to g_points array
   g_points.push([x, y]);
-
-  console.log(g_selectedColor);
   
   // Store the color to g_colors array
   // g_colors.push(g_selectedColor.slice());
