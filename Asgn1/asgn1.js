@@ -153,6 +153,12 @@ function main() {
   gl.clear(gl.COLOR_BUFFER_BIT);
 }
 
+var g_shapesList = [];
+
+// var g_points = [];  // The array for the position of a mouse press
+// var g_colors = [];  // The array to store the color of a point
+// var g_sizes = [];
+
 // Draw every shape that is supposed to be in the canvas
 function renderAllShapes() {
   // Clear <canvas>
@@ -165,12 +171,6 @@ function renderAllShapes() {
     g_shapesList.render();
   }
 }
-
-var g_shapesList = [];
-
-// var g_points = [];  // The array for the position of a mouse press
-// var g_colors = [];  // The array to store the color of a point
-// var g_sizes = [];
 
 function click(ev) {
   // Extract the event click and return it in WebGL coordinates
