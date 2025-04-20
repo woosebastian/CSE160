@@ -9,6 +9,7 @@
 // https://www.youtube.com/watch?v=61ez8RPpeD8&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=11
 // https://www.youtube.com/watch?v=OnFc7KfIamg&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=12
 // https://www.youtube.com/watch?v=_vXKnNi__fo&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=13
+// https://www.youtube.com/watch?v=Jg2l8-yHm_8&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=15
 
 // // HelloPoint1.js (c) 2012 matsuda
 // // Vertex shader program
@@ -124,6 +125,8 @@ let g_selectedSize = 5;
 
 // Set up actions for the HTML UI elements
 function addActionsForHtmlUI() {
+    document.getElementById('clearButton').onclick = function() {g_shapesList=[]; renderAllShapes();};
+    
     // Slider Events
     document.getElementById('redSlide').addEventListener('mouseup', function() { g_selectedColor[0] = this.value/100; });
     document.getElementById('greenSlide').addEventListener('mouseup', function() { g_selectedColor[1] = this.value/100; });
