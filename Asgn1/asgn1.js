@@ -121,14 +121,22 @@ function connectVariablesToGLSL() {
   }
 }
 
+// Constants
+const POINT = 0;
+const TRIANGLE = 1;
+
 // Globals related UI elements
 let g_selectedColor = [1.0, 1.0, 1.0, 1.0];
 let g_selectedSize = 5;
+let g_selectedType = POINT;
 
 // Set up actions for the HTML UI elements
 function addActionsForHtmlUI() {
     document.getElementById('clearButton').onclick = function() {g_shapesList=[]; renderAllShapes();};
     
+    document.getElementById('pointButton').onclick = function() {g_selectedType=POINT};
+    document.getElementById('triButton').onclick = function() {g_selectedType=TRIANGLE};
+
     // Slider Events
     document.getElementById('redSlide').addEventListener('mouseup', function() { g_selectedColor[0] = this.value/100; });
     document.getElementById('greenSlide').addEventListener('mouseup', function() { g_selectedColor[1] = this.value/100; });
@@ -200,7 +208,13 @@ function click(ev) {
   let [x,y] = convertCoordinatesEventToGL(ev);
 
   // Create and store the new point
-  let point = new Point();
+  let point;
+  if (g_selectedType == POINT) {
+    point = new Point();
+  } else {
+    point = new Triangle();
+  }
+//   let point = new Triangle();
   point.position = [x,y];
   point.color = g_selectedColor.slice();
   point.size = g_selectedSize;
