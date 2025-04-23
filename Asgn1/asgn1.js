@@ -124,6 +124,7 @@ function connectVariablesToGLSL() {
 // Constants
 const POINT = 0;
 const TRIANGLE = 1;
+const CIRCLE = 2;
 
 // Globals related UI elements
 let g_selectedColor = [1.0, 1.0, 1.0, 1.0];
