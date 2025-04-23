@@ -1,4 +1,5 @@
 // https://www.youtube.com/watch?v=la4tgPj_67U&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=19
+// https://www.youtube.com/watch?v=q77C-1XRBfQ&list=PLbyTU_tFIkcMK5FiV6btXxHQAy15p0j7X&index=20
 
 class Point {
     constructor() {

@@ -136,6 +136,7 @@ function addActionsForHtmlUI() {
     
     document.getElementById('pointButton').onclick = function() {g_selectedType=POINT};
     document.getElementById('triButton').onclick = function() {g_selectedType=TRIANGLE};
+    document.getElementById('circleButton').onclick = function() {g_selectedType=CIRCLE};
 
     // Slider Events
     document.getElementById('redSlide').addEventListener('mouseup', function() { g_selectedColor[0] = this.value/100; });
@@ -211,8 +212,10 @@ function click(ev) {
   let point;
   if (g_selectedType == POINT) {
     point = new Point();
-  } else {
+  } else if (g_selectedType == TRIANGLE) {
     point = new Triangle();
+  } else {
+    point = new Circle();
   }
 //   let point = new Triangle();
   point.position = [x,y];
